@@ -1,5 +1,6 @@
 import { Container, VStack, Text, Heading, Box, Button, Image } from "@chakra-ui/react";
 import { FaPlay, FaPause, FaForward, FaBackward } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Index = () => {
   return (
@@ -15,6 +16,10 @@ const Index = () => {
           <Button leftIcon={<FaPlay />} colorScheme="teal" variant="solid">Play</Button>
           <Button leftIcon={<FaPause />} colorScheme="teal" variant="solid">Pause</Button>
           <Button leftIcon={<FaForward />} colorScheme="teal" variant="solid">Next</Button>
+        </VStack>
+        <VStack spacing={4} direction="row" mt={6}>
+          <Button as={Link} to="/create-playlist" colorScheme="teal" variant="outline">Create Playlist</Button>
+          <Button as={Link} to="/view-playlists" colorScheme="teal" variant="outline">View Playlists</Button>
         </VStack>
       </VStack>
     </Container>
